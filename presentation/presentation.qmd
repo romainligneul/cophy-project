@@ -16,7 +16,7 @@ format:
 
 As scientists, we spend a **lot** of time coding and writing.
 
-![](../analyses/figures/timespent.png){fig-align="center" width="80%"}
+![](../_analyses/figures/timespent.png){fig-align="center" width="80%"}
 
 Unfortunately, both activities involve repetitive behaviors and suboptimal routines...
 
@@ -38,7 +38,7 @@ For example, we might...
 
 And this is particularly true when it comes with collaborating with our peers.
 
-![](../analyses/figures/happiness.png){fig-align="center" width="60%"}
+![](../_analyses/figures/happiness.png){fig-align="center" width="60%"}
 
 ## What prevents us from collaborating more smoothly?
 
@@ -62,7 +62,7 @@ And this is particularly true when it comes with collaborating with our peers.
 
 ## A (tiny) reason to hope!
 
-![](../analyses/figures/refManagement.png){fig-align="center" width="80%"}
+![](../_analyses/figures/refManagement.png){fig-align="center" width="80%"}
 
 Most Cophy-makers already use Zotero or are willing to change. Users of Latex will be fine anyways.
 
@@ -70,7 +70,7 @@ Most Cophy-makers already use Zotero or are willing to change. Users of Latex wi
 
 It seems that Cophy-makers use a **huge** diversity of IDE, and that we are still a minority to use Git-based version control.
 
-![](../analyses/figures/GitEditor.png){fig-align="center" width="80%"}
+![](../_analyses/figures/GitEditor.png){fig-align="center" width="80%"}
 
 PyCharm-Matlab people: who are you, what are your networks?🕵️
 
@@ -78,7 +78,7 @@ PyCharm-Matlab people: who are you, what are your networks?🕵️
 
 Correlation does not imply causation, but those who are still not using Git may still need to install Visual Studio Code.
 
-![](../analyses/figures/crossGitVS.png){fig-align="center" width="60%"}
+![](../_analyses/figures/crossGitVS.png){fig-align="center" width="60%"}
 
 # Tutorial!
 
@@ -128,5 +128,18 @@ For the others, you'll need [Anaconda](https://www.anaconda.com/download).
 
 ## Get the tutorial repository
 
+- Either visit `https://github.com/romainligneul/cophy-project`, dowload (Code tab near the green button) and unzip in the desired location.
 
+- Or `cd` to the desired location and type `git clone https://github.com/romainligneul/cophy-project`
 
+## Create the virtual environment
+
+1. Open a terminal
+
+2. `cd` into the newly created cophy-project folder
+
+3. type `conda env create --file=quarto-env.yml`
+
+4. type `python -m ipykernel install --user --name quarto-env`
+
+## Now, let's see if everything went well
