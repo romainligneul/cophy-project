@@ -1,0 +1,5 @@
+_output
+.quarto
+_extensions
+/.quarto/
+_analyses/Rproject/.Rproj.user
