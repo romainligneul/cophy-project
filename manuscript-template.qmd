@@ -28,7 +28,6 @@ csl: "styles/current-biology.csl"
 execute: 
   echo: false
 format: docx
-
 ---
 
 {{< include functions/_stats_format.qmd >}}
@@ -67,28 +66,24 @@ There are various ways to include images in a document. At the simplest,
 you just need to reference the image path and possibly add some
 formatting parameters. For example:
 
-
-
 But we can also make use of Quarto layouts.
-
 
 ## Bibliography
 
 ::: {#refs}
 :::
 
-
 ## Figures
 
 ### Insert pre-generated figure
 
-![Example Figure](_analyses/figures/writingTime.png){fig-align="center"
-width="50%" #fig-exampleImported fig-cap-location="bottom"}
-
+![Example
+Figure](_analyses/figures/writingTime.png){#fig-exampleImported
+fig-align="center" width="50%" fig-cap-location="bottom"}
 
 ### Insert Python figure (matplotlib)
 
-::: {width=100%}
+::: {width="100%"}
 ```{python}
 #| fig-cap: 
 #|   - "Example Python Figure with Caption. (A) Something. (B) Something else. (C) Yet another thing."
@@ -123,5 +118,4 @@ ax2.errorbar(x, y2, yerr=y2err, errorevery=(3, 6))
 
 plt.show()
 ```
-
 :::
