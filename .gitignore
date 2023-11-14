@@ -4,3 +4,4 @@ _extensions
 /.quarto/
 _analyses/R/.Rproj.user
 _freeze
+website/site_libs
