@@ -56,7 +56,7 @@ glme = fitglme(mfr,...
 'Distribution','Poisson','Link','log','FitMethod','Laplace',...
 'DummyVarCoding','effects')
 
-outputStr=sprintf('(beta(%.0f)=%.2f, p=%.4f)',glme.Coefficients.DF(2),glme.Coefficients.Estimate(2),glme.Coefficients.pValue(2))
+outputStr=sprintf('(beta(%.0f)=%.2f, p=%.4f)',glme.Coefficients.DF(4),glme.Coefficients.Estimate(4),glme.Coefficients.pValue(4))
 test.newprocess=outputStr;
 
 outputStr=sprintf('(beta(%.0f)=%.2f, p=%.4f)',glme.Coefficients.DF(3),glme.Coefficients.Estimate(3),glme.Coefficients.pValue(3))

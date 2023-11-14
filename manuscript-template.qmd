@@ -63,6 +63,7 @@ Here is another results based on the output from R lm() function:
 One may also output directly text to display from Matlab, R, Python or Julia:
 `{python} textStat("glmeExample","newprocess")`
 
+`{python} Mcorr("totest","weight", "age")`
 
 ## Automatic inclusion of images
 

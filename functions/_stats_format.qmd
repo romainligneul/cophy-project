@@ -62,7 +62,7 @@ def Mcorr(testname,var1,var2):
     # get the relevant json files
     json_files = [file for file in os.listdir(statdir) if file.startswith(prefix) and file.endswith(testname+'.json')]
     if len(json_files)!=1:
-      return "[TTEST STATS: no match or too many matches!]"
+      return "[Mcorr STATS: no match or too many matches!]"
     with open(statdir+"/"+json_files[0], 'r') as json_file:
       stat = json.load(json_file)
       ind1=stat["varNames"].index(var1)
