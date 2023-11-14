@@ -3,3 +3,4 @@ _output
 _extensions
 /.quarto/
 _analyses/Rproject/.Rproj.user
+_freeze
