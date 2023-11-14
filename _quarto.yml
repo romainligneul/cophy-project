@@ -7,8 +7,10 @@ bibliography: references.bib
 
 format:
   html:
-    theme: default
+    theme: 
+      - cerulean
     html-math-method: katex
+
   pdf:
     documentclass: report
     margin-left: 30mm
