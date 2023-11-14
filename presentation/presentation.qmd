@@ -134,6 +134,25 @@ Markdown thanks to a Word-like editor.
     [here](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
     to get the VScode extension.
 
+## Rationalized project management
+
+A scientific project has always more or less the same components:
+
+1. Raw data (to store separately if total >5gb or files >50mb)
+
+2. Analyses in various coding languages
+
+3. Preprocessed data and analysis output
+
+4. Presentations / Talks
+
+5. Manuscript
+
+6. Possibly a website
+   
+7. Quarto can greatly help with step 2-6.
+
+
 ## Final step before discovering Quarto
 
 Now, we'll just need to make sure that everyone has:
@@ -147,12 +166,12 @@ Once it's done, just close and restart.
 
 ## Let's experiment with our collaboration pipeline
 
-For those who have VScode and the VPN configured, you can continue on
+For those who have VScode and the VPN configured, you may continue on
 the CRNL server.
 
 To do so, just click the bottom left button of VS code
 
-![](img/sshButton.png){fig-align="center" width="50%"}
+![](images/sshButton.png){fig-align="center" width="30%"}
 
 Choose "Connect to host" and enter: `ssh prenom.nom@10.69.168.62`
 
@@ -215,7 +234,7 @@ quarto install tinytex`
 quarto preview manuscript-template.qmd --to pdf
 ```
 
-## Make a website!
+## Make a website
 
 If you can create a Word document with Quarto, you can also create a
 website! Let's have a look at what happens if we type:
@@ -227,3 +246,25 @@ quarto preview website
 You should see something like that:
 
 ![](images/paste-2.png){fig-align="center" width="628"}
+
+Publishing the website online is straighforward if you use one of the
+solutions described on the [dedicated
+page](https://quarto.org/docs/publishing/).
+
+## Generate this presentation
+
+This presentation is actually included in the template. You can see it
+here.
+
+```         
+quarto preview presentation/presentation.qmd
+```
+
+If we want to get a Powerpoint rather than a HTML presentation, we can
+write:
+
+```         
+quarto render presentation/presentation.qmd --to pptx
+```
+
+## Thank you! {background-color="black" background-image="images/Picture1.jpg"}

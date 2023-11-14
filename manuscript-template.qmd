@@ -29,7 +29,7 @@ execute:
   echo: false
 format: docx
 ---
-
+Version: {{< var version >}}
 {{< include functions/_stats_format.qmd >}}
 
 ## General Information
@@ -59,6 +59,10 @@ displayed automatically: `{python} Ttest("stock")`
 
 Here is another results based on the output from R lm() function:
 `{python} Rlm("example","weight")`
+
+One may also output directly text to display from Matlab, R, Python or Julia:
+`{python} textStat("glmeExample","newprocess")`
+
 
 ## Automatic inclusion of images
 
