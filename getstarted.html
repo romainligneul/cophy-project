@@ -179,10 +179,13 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><strong>An integrated development environment</strong>. By default, we will use <a href="[https://code.visualstudio.com/](https://code.visualstudio.com/)">Visual Code</a>) for this tutorial, but you could work also with JupyterLab, Rstudio or Neovim. Other IDEs such as PyCharm or Eclipse are also possible but less recommended.</li>
 <li><strong>A virtual environment manager</strong>. We will use <a href="https://www.anaconda.com/download">Anaconda</a> that greatly facilitates the creation and management of virtual environments based on Python (but not only). If asked about by the installer, make sure to tick <em>Add Anaconda to my PATH environment variable</em>.</li>
-<li><strong>A version-control software</strong>. We will use <a href="https://git-scm.com/">Git</a> and since this repository is on Github, we’ll also use the <a href="https://cli.github.com/">Github CLI</a> (Github command line interface)</li>
+<li><strong>A version-control software</strong>. We will use <a href="https://git-scm.com/">Git</a> and since this repository is on Github, we’ll also use the <a href="https://cli.github.com/">Github CLI</a> (Github command line interface). You don’t need to install the Github CLI manually (it is done through Anaconda).</li>
 <li><strong>An open-source scientific and technical publishing system</strong>. We will use <a href="https://quarto.org/docs/download/">Quarto</a> to export our productions to various formats. Quarto is a young but very promising and potent framework dedicated to scientific publishing in all its forms (i.e., dashboards, reports, manuscripts, books, websites, presentations). Make sure to download <span style="color:red">version 1.4 or above</span>. For now, it is only available from the <em>Pre-release</em> tab. Uninstall the previous version beforehand if you had installed one already.</li>
 </ol>
 <p>The installation of these tools should not take long (~5 minutes), since they are all lightweight and that you just have to follow the default installation procedures.</p>
+<div class="alert alert-dismissible alert-warning">
+<p>If you install quarto on Linux without sudo access, you might need to follow this <a href="./help_quartonosudo.html">guide</a></p>
+</div>
 </section>
 <section id="configuration" class="level2">
 <h2 class="anchored" data-anchor-id="configuration">Configuration</h2>
@@ -234,7 +237,7 @@ cd Projects</code></pre>
 <h3 class="anchored" data-anchor-id="finish-the-configuration">Finish the configuration</h3>
 <p>Assuming that you entered in the newly created folder already (e.g.&nbsp;by typing <code>cd mycophyproject</code> or <code>cd C:/Projects/mycophyproject</code>), there is just a few commands to run to finalize the installation of the template.</p>
 <ol type="1">
-<li><p>type <code>conda env create --file=quarto-env.yml</code></p></li>
+<li><p>depending on your system, type <code>conda env create --file=quarto-env-windows.yml</code> or <code>conda env create --file=quarto-env-linux.yml</code></p></li>
 <li><p>type <code>conda activate quarto-env</code></p></li>
 <li><p>type <code>python -m ipykernel install --user --name quarto-env</code></p></li>
 <li><p>type <code>quarto install tinytex</code> (optional, to generate PDF documents)</p></li>
