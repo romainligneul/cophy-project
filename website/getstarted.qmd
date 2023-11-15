@@ -43,7 +43,8 @@ Any command line interface allows you to `cd` to any place of your computer. On 
 
 For the rest of this tutorial, we will assume that you work in: `C:/Projects/` but you could work in any other folder.
 So, if we don't have that folder already we can type the following commands.
-```
+
+```{bash}
 C:
 mkdir Projects
 cd Projects
@@ -92,3 +93,26 @@ That's it! You can now use and modify the template to your needs. Check the corr
 If you encountered an issue, you can report it [here](https://github.com/romainligneul/cophy-project/issues)
 
 
+## Bonus steps for VScode users
+
+One strength of Visual Studio Code is its amazing ecosystem of extensions. Getting the right extensions can facilitate your life in many ways. Hereafter, a list of extensions you might want to install:
+
+-  Connect directly to any remote server: [SSH extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+
+- Real-time collaboration tool (great to debug and even write together): [LiveShare](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+
+- Facilitate the use and the understanding of Git: [GitGraph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+
+- Preview any website or HTML within VScode: [VScode browser](https://marketplace.visualstudio.com/items?itemName=Phu1237.vs-browser)
+
+- Use interactive Jupyter notebooks within VScode: [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+
+-  Simplifies working with Quarto: [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+
+- Get the help of GPT when coding: [GenieAI](https://marketplace.visualstudio.com/items?itemName=genieai.chatgpt-vscode)
+
+- Make almost any code look prettier: [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+- Facilitate the use of Python: [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+There are many more to explore (see *File -> Extensions*)

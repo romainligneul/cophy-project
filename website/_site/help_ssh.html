@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Cophy Project - Main tutorial for Cophy Project</title>
+<title>Cophy Project - Connecting to the CRNL server over SSH in Visual Code</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -91,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Get started</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./tutorial.html" aria-current="page"> 
+    <a class="nav-link" href="./tutorial.html"> 
 <span class="menu-text">Main tutorial</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -135,8 +135,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#citations" id="toc-citations" class="nav-link" data-scroll-target="#citations">Citations</a></li>
+  <li><a href="#set-up-the-vpn-of-inserm-if-you-are-outside-the-crnl-premises" id="toc-set-up-the-vpn-of-inserm-if-you-are-outside-the-crnl-premises" class="nav-link active" data-scroll-target="#set-up-the-vpn-of-inserm-if-you-are-outside-the-crnl-premises">Set up the VPN of INSERM (if you are outside the CRNL premises)</a></li>
+  <li><a href="#connect-with-username-and-password" id="toc-connect-with-username-and-password" class="nav-link" data-scroll-target="#connect-with-username-and-password">Connect with username and password</a></li>
+  <li><a href="#create-a-pair-of-keys-and-configure-them" id="toc-create-a-pair-of-keys-and-configure-them" class="nav-link" data-scroll-target="#create-a-pair-of-keys-and-configure-them">Create a pair of keys and configure them</a></li>
   </ul>
 </nav>
     </div>
@@ -145,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Main tutorial for Cophy Project</h1>
+<h1 class="title">Connecting to the CRNL server over SSH in Visual Code</h1>
 </div>
 
 
@@ -162,27 +163,48 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!--To start, we learn how to write down a :blush: smiley. Top priority-->
-<p>You can use this template (and Quarto) in multiple ways. Obviously, you can use it on your personal computer(s), but you can also use directly on a shared server like the CRNL cluster (see the dedicated tuto). One of the main advantages of Quarto for collaborative writing is that it is perfectly integrated with Visual Code (other IDEs also have their neat extensions, like JupyterLab, Rstudio or Neovim) and Zotero. Another big advantage is to facilitate <strong>a lot</strong> the integration of data processing and figure generation with the writing process. It can even use methods to automatically rewrite your statistics in the main text, each time you re-run an analysis. :blush:</p>
-<!--Here you see how to make an h2 title :) other title sizes are # ## ### #### ##### ######. By the way, you might have noticed that Markdown comments are totally ignored: you won't even see empty lines in place of them in the rendered version. How convenient to exchange diverse feedback, ideas and references with colleagues, without cluttering the output!-->
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This tutorial is obviously more complex than just logging in Google and opening a Google Doc, but it guides and explains you each step and it might still be of interest for those who want a more modern and efficient, privacy-conscious workflow, enabling real-time collaborative writing. Carefully implemented, this template might be particularly useful to any researcher who wishes to make a big step forward in collaborative / open science without losing functionality (in fact, they will gain functionality). Let’s not forget that careers and labs last for decades and that good workflows can save you from weeks or months of (cumulative) suboptimal procedures.</p>
-<!--Here, the markup for bold fonts-->
-<p>Last but not least, it relies entirely on <strong>free, open-source</strong> software!</p>
-<!--Here, you can see how an external URL can be linked in a Markdown file. In between the brackets [], you find the text which will be rendered and in parentheses () you see the actual URL that will be opened after clicking -->
-<p>Markdown is at the heart of our approach. It is <em>the</em> markup language that allows extremely quick and reproducible writing. Markdown is mostly defined by its syntax, where different symbols activate different functions. For example, the symbol # can be used to create titles of different size. # Will produce a huge title, whereas #### will produce a much smaller title. Symbols like *, _ , ~ or ^ allow to write bold, italics, subscript or superscript characters. Messaging apps like What’s App also use some of these syntactic shortcuts, but Markdown goes much farther and allows to create citations, URL links, tables, lists, figures, etc using a similar approach. The <a href="https://www.markdownguide.org/">Markdown website</a> is a good place to get started. Note that Github and many other Web development tools apps use Markdown routinely. Furthermore, Markdown allows formatting using in-line HTML (very potent) and templating like conventional word processors (i.e.&nbsp;choice of fonts, font style, color, etc.) using a .css style file and other methods.</p>
-<!--Here, you can see how easy it is to generate a numbered list in Markdown! The leading 1. 2. etc are sufficient! -->
-<p>However, as efficient as it can be, Markdown alone is not sufficient for academic writing. 1. First, we should install and configure some tool to manage citations and bibliographies. For this, we will use <a href="https://www.zotero.org/">Zotero</a> which has also an excellent support and great extensions. 2. Third, we may want to set up a pipeline to collaborate efficiently using Github and the LiveShare extension of Visual Code in order to allow real-time collaborative writing (the same approach also allows real-time collaborative coding). It is very well maintained by Microsoft and it is free. 3. Along the way, we may install other optional software such as <a href="https://miktex.org/">MikTex</a> to facilitate the writing of equation and export to PDF, or <a href="https://mermaid.js.org/">Mermaid</a> to write down graphs in Markdown.</p>
-<!--Here you can see an example of strong italic font (in between the *** *** symbols)=-->
-<p>If you open the file used to render the content you’re reading using an IDE (like Visual Code), you’ll find a lot of comments that explain how Markdown was used to write it. You’ll find examples for most markup techniques. If you’ve clone the repository (as indicated in the installation step), you will find the source file at website/tutorial.qmd.</p>
+<p>Visual Code has a great <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">Remote SSH</a> extension that can be used to connect remotely to the CRNL server, without having to constantly enter your password. Except for using Matlab (it may change soon), working on the server from VScode has only advantages, starting with <strong>speed</strong> (as compared to laggy VNC connections). Since the connection process can be a bit tedious, here are the steps to follow. You have only to follow them once. It is assumed that you use Windows, but it should be similar on other platforms.</p>
+<section id="set-up-the-vpn-of-inserm-if-you-are-outside-the-crnl-premises" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-the-vpn-of-inserm-if-you-are-outside-the-crnl-premises">Set up the VPN of INSERM (if you are outside the CRNL premises)</h2>
+<p>To access the CRNL servers from outside, following this tutorial.</p>
+<p><a href="https://wiki.crnl.fr/doku.php?id=wiki:informatique:services:vpn" class="uri">https://wiki.crnl.fr/doku.php?id=wiki:informatique:services:vpn</a></p>
+<p>You need your CRNL identifiers to access this page. Essentially, besides installing the software, <strong>you have to fill the PDF “fiche”</strong> (<a href="https://wiki.crnl.fr/doku.php?id=wiki:informatique:services:vpn">here</a>) and send it to <a href="pe.aguera@inserm.fr">pe.aguera@inserm.fr</a>. Then, it will be a matter of days before you can access the CRNL infrastructure remotely. You’ll be noticed by email.</p>
+<p>If you don’t have an INSERM email, you can ask one if you work at CRNL (even if you are affiliated to CNRS or UCBL).</p>
 </section>
-<section id="citations" class="level2">
-<h2 class="anchored" data-anchor-id="citations">Citations</h2>
-<p>The first thing we want to learn is to cite a paper. There are many ways to do so, but you’ll probably often use the amazing tool provided by Quarto.</p>
-<p>To activate Quarto’s citation picker, just type Ctrl+Shift+F8. Otherwise, if you are in the Visual Mode, you can use the menu: Insert –&gt; Citation.</p>
-<p>Once you’ve cited an item, it will appear as an unformatted citation key <span class="citation" data-cites="WATSON1953">[@WATSON1953]</span> in the file. Don’t worry, the principle of Markdown is to decouple writing from rendering text. This is why is it so fast and fluid, but also why you may see peculiar markup, even when using the Visual Mode.</p>
-<p>In principle, Quarto automatically detects your local Zotero database and gives your the possibility of picking your own articles. However, if you are using Quarto through the VScodeSSH methods, it won’t find your Zotero that runs on a different system (your local computer). It is unlikely that you’ll be often using Quarto in this way to write because this connection mode is mostly useful whenever you want to run demanding computations on the server using the VScodeSSH-Jupyter approach. There are ways to go around this limitations, but it is a bit too advanced for now.</p>
+<section id="connect-with-username-and-password" class="level2">
+<h2 class="anchored" data-anchor-id="connect-with-username-and-password">Connect with username and password</h2>
+<p>In Visual Code, first click on the bottom left icon of the Remote SSH extension.</p>
+<p><img src="images/paste-1.png" class="img-fluid"></p>
+<ul>
+<li><p>Type, connect to host and enter: <code>ssh yourusername@10.69.168.62</code></p></li>
+<li><p>Then, you’ll be asked to enter your password.</p></li>
+<li><p>Open your <em>/home/yourusername</em> folder (it will ask your password a 2nd time)</p></li>
+<li><p>Create a .ssh folder (<em>/home/yourusername/.ssh</em>) and inside that folder, create a file named <em>authorized_keys</em> (without any extension)</p></li>
+<li><p>Open this file</p></li>
+</ul>
+<p>Leave open this Visual Code session that we will call the <em>server session</em>, to open and create the pair of keys.</p>
+</section>
+<section id="create-a-pair-of-keys-and-configure-them" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-pair-of-keys-and-configure-them">Create a pair of keys and configure them</h2>
+<ol type="1">
+<li>Open VS code a second time on your local computer. We will call this one the <em>local session</em></li>
+<li>Open a terminal in this local session.</li>
+<li><code>cd</code> to the folder of your choice (that’s where the SSH keys will be stored, so there should be <strong>no space</strong> in the path)</li>
+<li>Type <code>ssh-keygen -t ed25519</code> and chose whatever name you like for the key. You don’t have to set a password. If ssh-keygen is throwing an error, see <a href="https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui#install-openssh-for-windows">here</a>.</li>
+<li>Two files are created, open the file ending with a .pub extension using VS code or any text editor.</li>
+<li>Copy its content and paste it in the <em>authorized_keys</em> file that should be opened in your VS code <em>server session</em> (the one we used first)</li>
+<li>Now, return to your <em>local session</em> and click again on the blue icon of the Remote SSH extension (bottom left).</li>
+<li>Click <em>Connect to host</em></li>
+<li>Click <em>Configure SSH Hosts</em></li>
+<li>Click on the line displaying C:\Users\UserName\.ssh\config and make sure it looks as follow:</li>
+</ol>
+<pre><code>Host 10.69.168.62
+  HostName 10.69.168.62
+  ForwardX11 yes
+  User firstname.lastname
+  IdentityFile C:\pathofyourkeyfile\yourkeyfile</code></pre>
+<p>Of course, change the User and IdentityFile fields for your own username and path to the key (do not include the .pub extension)</p>
+<p>That’s it. In principle, the next time you click on <em>Connect to host</em> in Visual Code, you won’t have to enter any password.</p>
 
 
 </section>

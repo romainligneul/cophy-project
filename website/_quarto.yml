@@ -1,6 +1,9 @@
 project:
   type: website
 
+execute:
+  freeze: auto
+
 website:
   title: "Cophy Project"
   navbar:
@@ -8,8 +11,18 @@ website:
     left:
       - text: "Get started"
         file: getstarted.qmd
-      - text: "Tutorial"
+      - text: "Main tutorial"
         file: tutorial.qmd        
+      - text: "Other tutorials"
+        menu:
+          - text: "Github"
+            file: help_github.qmd
+          - text: "SSH in VS code"
+            file: help_ssh.qmd
+          - text: "BetterBibTex and Zotero"
+            file: help_zotero.qmd
+  
+    right:
       - text: "About"
         file: about.qmd
 

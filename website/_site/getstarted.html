@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.404">
+<meta name="generator" content="quarto-1.4.489">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
@@ -92,8 +92,29 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./tutorial.html"> 
-<span class="menu-text">Tutorial</span></a>
+<span class="menu-text">Main tutorial</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-other-tutorials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Other tutorials</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-other-tutorials">    
+        <li>
+    <a class="dropdown-item" href="./help_github.html">
+ <span class="dropdown-text">Github</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./help_ssh.html">
+ <span class="dropdown-text">SSH in VS code</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./help_zotero.html">
+ <span class="dropdown-text">BetterBibTex and Zotero</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
@@ -122,6 +143,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#log-in-github-and-get-the-template" id="toc-log-in-github-and-get-the-template" class="nav-link" data-scroll-target="#log-in-github-and-get-the-template">Log in Github and get the template</a></li>
   <li><a href="#finish-the-configuration" id="toc-finish-the-configuration" class="nav-link" data-scroll-target="#finish-the-configuration">Finish the configuration</a></li>
   </ul></li>
+  <li><a href="#bonus-steps-for-vscode-users" id="toc-bonus-steps-for-vscode-users" class="nav-link" data-scroll-target="#bonus-steps-for-vscode-users">Bonus steps for VScode users</a></li>
   </ul>
 </nav>
     </div>
@@ -178,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </div>
 <p>For the rest of this tutorial, we will assume that you work in: <code>C:/Projects/</code> but you could work in any other folder. So, if we don’t have that folder already we can type the following commands.</p>
-<pre><code>C:
+<pre class="{bash}"><code>C:
 mkdir Projects
 cd Projects</code></pre>
 </section>
@@ -216,9 +238,25 @@ cd Projects</code></pre>
 <p>If the conda commands throw an error (it should not if you read carefully the installation guidelines above), check this <a href="https://bobbyhadz.com/blog/conda-is-not-recognized-as-internal-or-external-command">troubleshooting</a>.</p>
 <p>That’s it! You can now use and modify the template to your needs. Check the corresponding <a href="./tutorial.html">section</a> for more guidance on how to use and develop the template together with Quarto.</p>
 <p>If you encountered an issue, you can report it <a href="https://github.com/romainligneul/cophy-project/issues">here</a></p>
-
-
 </section>
+</section>
+<section id="bonus-steps-for-vscode-users" class="level2">
+<h2 class="anchored" data-anchor-id="bonus-steps-for-vscode-users">Bonus steps for VScode users</h2>
+<p>One strength of Visual Studio Code is its amazing ecosystem of extensions. Getting the right extensions can facilitate your life in many ways. Hereafter, a list of extensions you might want to install:</p>
+<ul>
+<li><p>Connect directly to any remote server: <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack">SSH extension</a></p></li>
+<li><p>Real-time collaboration tool (great to debug and even write together): <a href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare">LiveShare</a></p></li>
+<li><p>Facilitate the use and the understanding of Git: <a href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">GitGraph</a></p></li>
+<li><p>Preview any website or HTML within VScode: <a href="https://marketplace.visualstudio.com/items?itemName=Phu1237.vs-browser">VScode browser</a></p></li>
+<li><p>Use interactive Jupyter notebooks within VScode: <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter</a></p></li>
+<li><p>Simplifies working with Quarto: <a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto</a></p></li>
+<li><p>Get the help of GPT when coding: <a href="https://marketplace.visualstudio.com/items?itemName=genieai.chatgpt-vscode">GenieAI</a></p></li>
+<li><p>Make almost any code look prettier: <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">Prettier</a></p></li>
+<li><p>Facilitate the use of Python: <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a></p></li>
+</ul>
+<p>There are many more to explore (see <em>File -&gt; Extensions</em>)</p>
+
+
 </section>
 
 </main> <!-- /main -->

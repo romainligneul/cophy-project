@@ -20,6 +20,12 @@ This website provides information about the template used for new scientific pro
 
 All scientific project share similar components and they can therefore be integrated within a standard template, provided that the template is flexible enough. Templating does not only facilitate collaborative open science, it can also greatly accelerate the overall scientific process, thanks to a myriad of excellent tools such as Git, Quarto, Jupyter, etc.
 
+## Dissociating writing from rendering content
+
+Academics spend a lot of their time writing papers, proposals, reports and other documents. Many are happy with traditional workflows combining a commercial word processors (e.g. Word) with a bibliography software such as Zotero or Mendeley. 
+But academic writing is often collaborative and a lot of researchers actually use Google Docs (with some plugins) to do so.
+The problem is that Google Docs offer little guarantees when it comes to privacy, and they are rather limited when it comes to templating, writing equations or simply using it offline. Moreover, Google Docs still constitute one more interface in the daily life of academics (and not the best). By reading step by step the document hereafter, you may set up an alternative writing workflow using Markdown, which will allow you (amongst others, to write publication-ready documents from your preferred code editor).
+
 ## How to contribute
 
 To contribute to the development and conception of the template, you can write to [romain.ligneul\@inserm.fr](mailto:romain.ligneul@inserm.fr). You'll need a [Github account](github.com).
