@@ -47,6 +47,24 @@ $dropdown-link-hover-bg:        $primary !default;
 $navbar-dark-color:             rgba($white, .8) !default;
 $navbar-dark-hover-color:       $white !default;
 
+$body-color: #222 !default;
+$body-bg: #fff !default;
+$primary: #468 !default;
+$secondary: #999 !default;
+
+$font-family-sans-serif: sans-serif !default;
+$border-color: lighten($body-color, 30%) !default;
+$table-border-color: $border-color !default;
+$border-width: 1px !default;
+$border-radius: 4px !default;
+
+$quarto-body-bg: $body-bg;
+$quarto-body-color: $body-color;
+$quarto-text-muted: $text-muted;
+$quarto-border-color: $table-border-color;
+$quarto-border-width: $border-width;
+$quarto-border-radius: $border-radius;
+
 
 
 /*-- scss:rules --*/
@@ -139,4 +157,47 @@ h6 {
   &.bg-light {
     color: $dark;
   }
+}
+
+// quarto website
+
+.code-with-filename .code-with-filename-file {
+  margin-bottom: 0;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 0.7em;
+  border: var($quarto-border-width) solid var($quarto-border-color);
+  border-radius: var($quarto-border-radius);
+  border-bottom: 0;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+
+.code-with-filename p {
+  margin-bottom: 0;
+}
+
+.code-with-filename div.sourceCode,
+.reveal .code-with-filename div.sourceCode {
+  margin-top: 0;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
+}
+
+.code-with-filename .code-with-filename-file pre {
+  margin-bottom: 0;
+}
+
+.code-with-filename .code-with-filename-file,
+.code-with-filename .code-with-filename-file pre {
+  background-color: rgba(219, 219, 219, 0.8);
+}
+
+.quarto-dark .code-with-filename .code-with-filename-file,
+.quarto-dark .code-with-filename .code-with-filename-file pre {
+  background-color: #555;
+}
+
+.code-with-filename .code-with-filename-file strong {
+  font-weight: 400;
 }

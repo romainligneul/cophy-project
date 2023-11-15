@@ -17,6 +17,11 @@ This template is leveraging modern tools that enable reproducible, open and coll
 
 The installation of these tools should not take long (\~5 minutes), since they are all lightweight and that you just have to follow the default installation procedures.
 
+::: {.alert .alert-dismissible .alert-warning} 
+If you install quarto on Linux without sudo access, you might need to follow this [guide](help_quartonosudo.qmd)
+:::
+
+
 ## Configuration
 
 The following steps assume that the 5 tools described above have been successfully installed. They should take 10-15 minutes to complete.
@@ -78,7 +83,7 @@ Just visit [https://github.com/romainligneul/cophy-project](https://github.com/r
 
 Assuming that you entered in the newly created folder already (e.g. by typing `cd mycophyproject` or `cd C:/Projects/mycophyproject`), there is just a few commands to run to finalize the installation of the template.
 
-1.  type `conda env create --file=quarto-env.yml`
+1.  depending on your system, type `conda env create --file=quarto-env-windows.yml` or `conda env create --file=quarto-env-linux.yml`
 
 2.  type `conda activate quarto-env`
 
@@ -91,7 +96,6 @@ If the conda commands throw an error (it should not if you read carefully the in
 That's it! You can now use and modify the template to your needs. Check the corresponding [section](tutorial.qmd) for more guidance on how to use and develop the template together with Quarto.
 
 If you encountered an issue, you can report it [here](https://github.com/romainligneul/cophy-project/issues)
-
 
 ## Bonus steps for VScode users
 

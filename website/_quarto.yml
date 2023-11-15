@@ -19,6 +19,8 @@ website:
             file: help_github.qmd
           - text: "SSH in VS code"
             file: help_ssh.qmd
+          - text: "Quarto without Sudo"
+            file: help_quartonosudo.qmd
           - text: "BetterBibTex and Zotero"
             file: help_zotero.qmd
   
